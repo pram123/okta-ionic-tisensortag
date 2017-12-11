@@ -2,7 +2,11 @@ This is the mobile app that accompanies the Okta-TISensor project.
 
 ## Introduction
 This is an ionic app that was used in a POC showing how Okta can be used to bridge the gap between the user, an application and an IoT device.
+As-is, no warranties implied - this is a Proof Of Concept
 
+## Author
+    Prashanth Ram (pram123@gmail.com)
+    
 ## Steps to build
   * `run npm install`
   * Follow steps [here](https://ionicframework.com/docs/cli/cordova/run/) to run the application
