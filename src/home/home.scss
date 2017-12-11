@@ -1,0 +1,61 @@
+page-home {
+  .claims {
+    pre {
+      color: green;
+    }
+  }
+  pre {
+    border: 1px solid silver;
+    background: #eee;
+    padding: 10px;
+  }
+
+  .card-background-page {
+
+    ion-card-header{
+      background-color:#D7FFD3;
+      border-bottom-color: black;
+    }
+    img{
+      opacity: 0.3;
+      filter: alpha(opacity=30); /* For IE8 and earlier */
+      height: 30%;
+      width: 30%;
+
+    }
+
+    img:hover {
+      opacity: .7;
+      filter: alpha(opacity=70); /* For IE8 and earlier */
+      height: 30%;
+      width: 30%;
+    }
+
+    ion-card {
+      position: relative;
+      text-align: center;
+    }
+
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #000000;
+    }
+
+  }
+  /* Empty. Add your own CSS if you like */
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+
+}
+

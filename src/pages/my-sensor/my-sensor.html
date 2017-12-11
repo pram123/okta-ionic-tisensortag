@@ -1,0 +1,89 @@
+<!--
+  Generated template for the MySensorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sensor  </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <div class="app">
+    <div id="mainPage">
+      <ion-card>
+        <ion-card-header>Select sensor to connect to</ion-card-header>
+        <ion-card-content><div id="deviceList"></div></ion-card-content>
+      </ion-card>
+
+      <button ion-button full id="refreshButton">Scan for devices </button>
+    </div>
+
+    <div id="detailPage">
+      <h2>Connected to <div id="myDeviceID" style="color: #5CB253"></div> </h2>
+
+
+      <ion-card>
+        <ion-card-header> Gyroscope Graph </ion-card-header>
+        <ion-card-content> <canvas #gyroCanvas id="gyroCanvas"></canvas> </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>Accelerometer Graph </ion-card-header>
+        <ion-card-content> <canvas #accCanvas id="accCanvas"></canvas> </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>Environmental Metrics </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+                <ion-col>
+                  <ion-icon name="thermometer"></ion-icon>°C: <span text-left id="temperatureData"></span>
+                </ion-col>
+                <ion-col>
+                  <ion-icon name="cloud-circle"></ion-icon>(hPa):<span text-left id="barometerData"></span>
+                </ion-col>
+            </ion-row>
+
+
+          </ion-grid>
+
+
+        </ion-card-content>
+      </ion-card>
+
+     <hr>
+      <h1> Raw Data</h1>
+
+      <ion-grid padding="5px" >
+        <ion-row>
+          <ion-col> Accelerometer
+            <pre text-left id="accelerometerData">
+            </pre>
+          </ion-col>
+          <ion-col> Gyroscope
+            <pre text-left id="gyroData">
+            </pre>
+          </ion-col>
+          <ion-col>Magnetic Sensor
+            <pre text-left id="magData">
+            </pre>
+          </ion-col>
+        </ion-row>
+
+
+      </ion-grid>
+      <button ion-button class="ion-close" full id="disconnectButton">Disconnect </button>
+    </div>
+  </div>
+
+
+</ion-content>

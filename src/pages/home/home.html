@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Welcome {{givenName}}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        Logout
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  class="card-background-page">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header style="background-color:#C0FFBA;">
+           <ion-icon name="apps"></ion-icon>Your Sensor
+          </ion-card-header>
+          <ion-card-content><button ion-button round [navPush]="mySensorPage">Connect to sensor</button>  </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card>
+          <ion-card-header style="background-color:#C0FFBA;">
+            <ion-icon name="person"></ion-icon>Your Account
+          </ion-card-header>
+          <ion-card-content><button ion-button round [navPush]="aboutPage">About me!</button>  </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-icon name="settings"> </ion-icon>Application Settings
+          </ion-card-header>
+          <ion-card-content><button ion-button round [navPush]="settingsPage">Configure Settings</button>  </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card>
+          <ion-card-header style="background-color:#C0FFBA">
+            <ion-icon name="call"></ion-icon>Support
+          </ion-card-header>
+          <ion-card-content>
+            View source for app and get additional information
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+<!--
+  <h2>Welcome <div *ngIf="givenName">{{ givenName }}</div></h2>
+  <p>This sample application demonstrates an integration with an IoT device and Okta
+  <p>
+  How does it work?
+    <ul>
+      <li> A user logs into this mobile application </li>
+      <li> A user scans for a sensors</li>
+      <li> The user then associates the selected sensor with their account </li>
+      <li> The sensors are read once a second(to preserve batter life)</li>
+       <li>Sensor information is aggregated in a messsage packet and sent every 9 seconds (to preserve batter life)</li>
+       <li> The message packet contains sensor information and the jwt token that is associated with the user</li>
+       <li> Packet is then decoded by the receiving server(https://sensorapi.ngrok.io/rest/incoming/save) and stored. </li>
+  </ul>
+
+  <div *ngIf="givenName">
+    <hr>
+    <p>You are logged in as: <b>{{ givenName }}</b></p>
+    <div class="claims">
+      <strong>Claims from Identity Token JWT:</strong>
+      <pre>{{claims | json}}</pre>
+    </div>
+  </div>
+  -->
+</ion-content>
